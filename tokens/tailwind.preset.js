@@ -22,9 +22,13 @@ export default {
     screens: breakpoints,
     extend: {
       colors: {
-        neutral: ramp("neutral"),
-        brand: ramp("brand"),
-        accent: ramp("accent"),
+        "neutral": ramp("neutral"),
+        "lavender": ramp("lavender"),
+        "rose": ramp("rose"),
+        "vermillion": ramp("vermillion"),
+        "marigold": ramp("marigold"),
+        "smoke-blue": ramp("smoke-blue"),
+        "moss-green": ramp("moss-green"),
 
         // Semantic — prefer these in components.
         text: {

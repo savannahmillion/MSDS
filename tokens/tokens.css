@@ -25,7 +25,7 @@
      in the TIER 2 block below.
      ---------------------------------------------------------------------- */
 
-  /* Ramp 1 — neutral (warm brown)
+ /* Ramp 1 — neutral (warm brown)
      Constant-ish hue ~72deg with a gentle warm-to-deep drift.
      L* is deliberately NON-linear: tight at the light end where surfaces
      need fine separation, wide through the middle where text tiers live.
@@ -40,94 +40,100 @@
   --neutral-800: #3F3326;
   --neutral-900: #251C14;
 
-  /* Ramp 2 — lavender                                          TODO */
-  --brand-100: #E1E7F6;
-  --brand-200: #C3CFED;
-  --brand-300: #A4B7E4;
-  --brand-400: #869FDB;
-  --brand-500: #6887D2;
-  --brand-600: #5D76B7;
-  --brand-700: #51669C;
-  --brand-800: #465581;
-  --brand-900: #3A4566;
+  /* Ramp 2 — lavender  (hue 266deg, constant)
+     L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
+  --lavender-100: #F0F7FF;
+  --lavender-200: #DDEAFF;
+  --lavender-300: #C3D7FF;
+  --lavender-400: #98B4F6;
+  --lavender-500: #6A8CDE;
+  --lavender-600: #4767B9;
+  --lavender-700: #314A8D;
+  --lavender-800: #1F3263;
+  --lavender-900: #111C3A;
 
-  /* Ramp 3 — rose                                         TODO */
-  --accent-100: #F5E6F4;
-  --accent-200: #ECCEE8;
-  --accent-300: #E2B5DD;
-  --accent-400: #D99DD1;
-  --accent-500: #CF84C6;
-  --accent-600: #B874AD;
-  --accent-700: #A26493;
-  --accent-800: #8B537A;
-  --accent-900: #754360;
+  /* Ramp 3 — rose  (hue 331deg, constant)
+     L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
+  --rose-100: #FFF2FD;
+  --rose-200: #FAE0F6;
+  --rose-300: #F2C8EB;
+  --rose-400: #DB9ED3;
+  --rose-500: #BC70B3;
+  --rose-600: #974A8F;
+  --rose-700: #71336B;
+  --rose-800: #4F214A;
+  --rose-900: #2E122B;
 
-  /* Ramp 4 — hue-4  (rename)                                          TODO */
-  --hue4-100: #fef5e7;
-  --hue4-200: #fce7c2;
-  --hue4-300: #f8d28e;
-  --hue4-400: #f2b54f;
-  --hue4-500: #e29517;
-  --hue4-600: #b87512;
-  --hue4-700: #915c0e;
-  --hue4-800: #6b440a;
-  --hue4-900: #452c07;
+  /* Ramp 4 — vermillion  (hue 9deg, constant)
+     L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
+  --vermillion-100: #FFF2F4;
+  --vermillion-200: #FFDFE4;
+  --vermillion-300: #FFC6CF;
+  --vermillion-400: #ED9BA9;
+  --vermillion-500: #D16A7F;
+  --vermillion-600: #AA445C;
+  --vermillion-700: #802E41;
+  --vermillion-800: #5A1D2C;
+  --vermillion-900: #351018;
 
-  /* Ramp 5 — hue-5  (rename)                                          TODO */
-  --hue5-100: #fdeef0;
-  --hue5-200: #fad3d9;
-  --hue5-300: #f5aab6;
-  --hue5-400: #ed788c;
-  --hue5-500: #de4560;
-  --hue5-600: #b8314a;
-  --hue5-700: #92253a;
-  --hue5-800: #6c1a2b;
-  --hue5-900: #46111c;
+  /* Ramp 5 — marigold  (hue 89deg, constant)
+     L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
+  --marigold-100: #FCF6E8;
+  --marigold-200: #F4E9CC;
+  --marigold-300: #E8D6A7;
+  --marigold-400: #CFB368;
+  --marigold-500: #AF8A0D;
+  --marigold-600: #8B6600;
+  --marigold-700: #674900;
+  --marigold-800: #483100;
+  --marigold-900: #291C00;
 
-  /* Ramp 6 — hue-6  (rename)                                          TODO */
-  --hue6-100: #f2eefd;
-  --hue6-200: #dfd5fa;
-  --hue6-300: #c4b2f5;
-  --hue6-400: #a085ed;
-  --hue6-500: #7c5ae0;
-  --hue6-600: #6144b8;
-  --hue6-700: #4c3492;
-  --hue6-800: #38266c;
-  --hue6-900: #241946;
+  /* Ramp 6 — smoke-blue  (desaturated on purpose — 'smoke')
+     L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
+  --smoke-blue-100: #F0F8FA;
+  --smoke-blue-200: #DDEDF1;
+  --smoke-blue-300: #C3DDE3;
+  --smoke-blue-400: #95BEC7;
+  --smoke-blue-500: #6499A4;
+  --smoke-blue-600: #3E7581;
+  --smoke-blue-700: #29565F;
+  --smoke-blue-800: #1A3B42;
+  --smoke-blue-900: #0D2126;
 
-  /* Ramp 7 — hue-7  (rename)                                          TODO */
-  --hue7-100: #f1f8e7;
-  --hue7-200: #deeec3;
-  --hue7-300: #c2df92;
-  --hue7-400: #a0cb5b;
-  --hue7-500: #7fb02c;
-  --hue7-600: #658c23;
-  --hue7-700: #4f6d1b;
-  --hue7-800: #3a5114;
-  --hue7-900: #26350d;
+  /* Ramp 7 — moss-green  (hue 188deg, constant)
+     L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
+  --moss-green-100: #E9FBF9;
+  --moss-green-200: #CDF3EE;
+  --moss-green-300: #A6E6DF;
+  --moss-green-400: #5FCBC1;
+  --moss-green-500: #00A89D;
+  --moss-green-600: #00837A;
+  --moss-green-700: #00615A;
+  --moss-green-800: #00433E;
+  --moss-green-900: #002623;
 
   /* ------------------------------------------------------------------------
      STATUS COLORS — 3 steps each is the practical minimum:
        100 = tinted surface · 500 = border / icon · 700 = text on tint
      Expand to a full 9-step ramp only if you actually need the steps.
      ---------------------------------------------------------------------- */
-  --success-100: #e9f7ef;                                           /* TODO */
-  --success-500: #21a366;                                           /* TODO */
-  --success-700: #14603c;                                           /* TODO */
+  --success-100: #EDFBF1;
+  --success-500: #3AA66E;
+  --success-700: #006033;
 
-  --warning-100: #fef6e6;                                           /* TODO */
-  --warning-500: #e0a116;                                           /* TODO */
-  --warning-700: #8a620d;                                           /* TODO */
+  --warning-100: #FEF6E8;
+  --warning-500: #B98414;
+  --warning-700: #6F4400;
 
-  --error-100: #fdedec;                                             /* TODO */
-  --error-500: #d64545;                                             /* TODO */
-  --error-700: #822a2a;                                             /* TODO */
+  --error-100: #FFF2F0;
+  --error-500: #D36C67;
+  --error-700: #822F2D;
 
   /* Info reuses the brand ramp. Give it its own values only if it must
      read as distinct from brand. */
-  --info-100: var(--brand-100);
-  --info-500: var(--brand-500);
-  --info-700: var(--brand-700);
+  --info-100: var(--lavender-100);
+  --info-500: var(--lavender-500);
+  --info-700: var(--lavender-700);
 
   /* Absolutes — not part of any ramp. */
   --white: #ffffff;
@@ -229,8 +235,8 @@
   --color-text-muted:    var(--neutral-700);
   --color-text-subtle:   var(--neutral-600);
   --color-text-inverse:  var(--white);
-  --color-text-accent:   var(--brand-700);
-  --color-text-link:     var(--brand-600);
+  --color-text-accent:   var(--lavender-700);
+  --color-text-link:     var(--lavender-600);
   --color-text-disabled: var(--neutral-400);
 
   /* Surfaces */
@@ -238,19 +244,19 @@
   --color-surface-raised:   var(--white);
   --color-surface-sunken:   var(--neutral-100);
   --color-surface-hover:    var(--neutral-100);
-  --color-surface-accent:   var(--brand-100);
+  --color-surface-accent:   var(--lavender-100);
   --color-surface-inverse:  var(--neutral-900);
 
   /* Borders */
   --color-border:        var(--neutral-200);
   --color-border-strong: var(--neutral-500);
-  --color-border-accent: var(--brand-300);
-  --color-focus-ring:    var(--brand-500);
+  --color-border-accent: var(--lavender-300);
+  --color-focus-ring:    var(--lavender-500);
 
   /* Primary action */
-  --color-action:         var(--brand-500);
-  --color-action-hover:   var(--brand-600);
-  --color-action-active:  var(--brand-700);
+  --color-action:         var(--lavender-600);
+  --color-action-hover:   var(--lavender-700);
+  --color-action-active:  var(--lavender-800);
   --color-action-text:    var(--white);
 
   /* Secondary action */
@@ -286,26 +292,26 @@
   --color-text-muted:    var(--neutral-400);
   --color-text-subtle:   var(--neutral-500);
   --color-text-inverse:  var(--neutral-900);
-  --color-text-accent:   var(--brand-300);
-  --color-text-link:     var(--brand-300);
+  --color-text-accent:   var(--lavender-300);
+  --color-text-link:     var(--lavender-300);
   --color-text-disabled: var(--neutral-600);
 
   --color-surface:         var(--neutral-900);
   --color-surface-raised:  var(--neutral-800);
   --color-surface-sunken:  var(--black);
   --color-surface-hover:   var(--neutral-800);
-  --color-surface-accent:  var(--brand-900);
+  --color-surface-accent:  var(--lavender-800);
   --color-surface-inverse: var(--neutral-100);
 
   --color-border:        var(--neutral-700);
   --color-border-strong: var(--neutral-600);
-  --color-border-accent: var(--brand-700);
-  --color-focus-ring:    var(--brand-400);
+  --color-border-accent: var(--lavender-700);
+  --color-focus-ring:    var(--lavender-400);
 
-  --color-action:        var(--brand-500);
-  --color-action-hover:  var(--brand-400);
-  --color-action-active: var(--brand-300);
-  --color-action-text:   var(--white);
+  --color-action:        var(--lavender-400);
+  --color-action-hover:  var(--lavender-300);
+  --color-action-active: var(--lavender-200);
+  --color-action-text:   var(--neutral-900);
 
   --color-action-secondary:       var(--neutral-800);
   --color-action-secondary-hover: var(--neutral-700);

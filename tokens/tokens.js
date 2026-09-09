@@ -37,7 +37,15 @@ export const breakpoints = {
 export const rampSteps = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 /** Ramp names. Rename these when you rename the ramps in tokens.css. */
-export const ramps = ["neutral", "brand", "accent", "hue4", "hue5", "hue6", "hue7"];
+export const ramps = [
+  "neutral",
+  "lavender",
+  "rose",
+  "vermillion",
+  "marigold",
+  "smoke-blue",
+  "moss-green",
+];
 
 /** e.g. rampToken("brand", 500) -> "--brand-500" */
 export const rampToken = (ramp, step) => `--${ramp}-${step}`;
