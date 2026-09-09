@@ -31,6 +31,7 @@ export const breakpoints = {
   md: "48rem", // 768
   lg: "64rem", // 1024
   xl: "80rem", // 1280
+  "2xl": "96rem", // 1536
 };
 
 /** Ramp steps, for generating chart series or iterating a scale. */

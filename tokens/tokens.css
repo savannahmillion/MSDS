@@ -258,6 +258,7 @@
   --color-surface-hover:    var(--neutral-100);
   --color-surface-accent:   var(--lavender-100);
   --color-surface-inverse:  var(--neutral-900);
+  --color-surface-inverse-raised: var(--neutral-800);
 
   /* Borders */
   --color-border:        var(--neutral-200);
@@ -275,6 +276,15 @@
   --color-action-secondary:       var(--neutral-100);
   --color-action-secondary-hover: var(--neutral-200);
   --color-action-secondary-text:  var(--neutral-900);
+
+  /* Categorical chart series — ordered for maximum separation.
+     Charts need a stable palette that is not tied to status meaning. */
+  --color-chart-1: var(--lavender-500);
+  --color-chart-2: var(--moss-green-500);
+  --color-chart-3: var(--marigold-500);
+  --color-chart-4: var(--rose-500);
+  --color-chart-5: var(--smoke-blue-500);
+  --color-chart-6: var(--vermillion-500);
 
   /* Status */
   --color-success:         var(--success-500);
@@ -314,6 +324,7 @@
   --color-surface-hover:   var(--neutral-800);
   --color-surface-accent:  var(--lavender-800);
   --color-surface-inverse: var(--neutral-100);
+  --color-surface-inverse-raised: var(--neutral-200);
 
   --color-border:        var(--neutral-700);
   --color-border-strong: var(--neutral-600);
@@ -328,6 +339,13 @@
   --color-action-secondary:       var(--neutral-800);
   --color-action-secondary-hover: var(--neutral-700);
   --color-action-secondary-text:  var(--neutral-100);
+
+  --color-chart-1: var(--lavender-400);
+  --color-chart-2: var(--moss-green-400);
+  --color-chart-3: var(--marigold-400);
+  --color-chart-4: var(--rose-400);
+  --color-chart-5: var(--smoke-blue-400);
+  --color-chart-6: var(--vermillion-400);
 
   --color-success-surface: var(--success-700);
   --color-success-text:    var(--success-100);
