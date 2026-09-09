@@ -40,10 +40,14 @@ Values live in `tokens/tokens.css`.
 | Family | Tokens |
 |---|---|
 | Ramps | `--neutral-{100..900}`, `--brand-*`, `--accent-*`, `--hue4-*`, `--hue5-*`, `--hue6-*`, `--hue7-*` |
-| Status | `--success-{100,500,700}`, `--warning-*`, `--error-*`, `--info-*` |
+| Status | `--success-{100,300,500,700}`, `--warning-*`, `--error-*`, `--info-*` — 100 surface · 300 fill · 500 border/icon · 700 text |
 | Absolutes | `--white`, `--black` |
 
 Step meaning: `100` lightest · `500` base · `900` darkest.
+
+Every ramp shares one L\* curve (97 92 86 74 59 45 33 22 11), so a step number
+means the same lightness in every hue. **Marigold is the one exception** — its
+400-600 run lighter (82/72/54) because a yellow at L\*59 is olive, not gold.
 
 ## Typography
 

@@ -30,108 +30,119 @@
      L* is deliberately NON-linear: tight at the light end where surfaces
      need fine separation, wide through the middle where text tiers live.
      L*:  97 · 92 · 86 · 74 · 59 · 45 · 33 · 22 · 11 */
-  --neutral-100: #FAF6EF;
-  --neutral-200: #F0E8DE;
-  --neutral-300: #E0D6C8;
-  --neutral-400: #C2B3A1;
-  --neutral-500: #9C8C79;
-  --neutral-600: #7A6855;
-  --neutral-700: #5B4B3A;
-  --neutral-800: #3F3326;
-  --neutral-900: #251C14;
+  --neutral-100: #FBF6EF;
+  --neutral-200: #EFE6DD;
+  --neutral-300: #E1D6C8;
+  --neutral-400: #C2B3A2;
+  --neutral-500: #9C8C78;
+  --neutral-600: #786855;
+  --neutral-700: #5A4C3A;
+  --neutral-800: #3E3325;
+  --neutral-900: #241C14;
 
   /* Ramp 2 — lavender  (hue 266deg, constant)
      L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
-  --lavender-100: #F0F7FF;
-  --lavender-200: #DDEAFF;
-  --lavender-300: #C3D7FF;
-  --lavender-400: #98B4F6;
+  --lavender-100: #F3F7FF;
+  --lavender-200: #DEE9FF;
+  --lavender-300: #C6D7FF;
+  --lavender-400: #99B5F7;
   --lavender-500: #6A8CDE;
   --lavender-600: #4767B9;
   --lavender-700: #314A8D;
-  --lavender-800: #1F3263;
+  --lavender-800: #203264;
   --lavender-900: #111C3A;
 
   /* Ramp 3 — rose  (hue 331deg, constant)
      L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
   --rose-100: #FFF2FD;
-  --rose-200: #FAE0F6;
-  --rose-300: #F2C8EB;
-  --rose-400: #DB9ED3;
-  --rose-500: #BC70B3;
-  --rose-600: #974A8F;
-  --rose-700: #71336B;
-  --rose-800: #4F214A;
-  --rose-900: #2E122B;
+  --rose-200: #FAE1F6;
+  --rose-300: #F4CAEE;
+  --rose-400: #E0A2D8;
+  --rose-500: #C073B7;
+  --rose-600: #9B4E93;
+  --rose-700: #74366F;
+  --rose-800: #51234D;
+  --rose-900: #2F132C;
 
   /* Ramp 4 — vermillion  (hue 9deg, constant)
      L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
-  --vermillion-100: #FFF2F4;
-  --vermillion-200: #FFDFE4;
-  --vermillion-300: #FFC6CF;
-  --vermillion-400: #ED9BA9;
-  --vermillion-500: #D16A7F;
-  --vermillion-600: #AA445C;
-  --vermillion-700: #802E41;
-  --vermillion-800: #5A1D2C;
-  --vermillion-900: #351018;
+  --vermillion-100: #FFF3F5;
+  --vermillion-200: #FFE1E4;
+  --vermillion-300: #FFCAD1;
+  --vermillion-400: #F39FAD;
+  --vermillion-500: #D56F82;
+  --vermillion-600: #AE485F;
+  --vermillion-700: #853145;
+  --vermillion-800: #5D1F2E;
+  --vermillion-900: #36111A;
 
-  /* Ramp 5 — marigold  (hue 89deg, constant)
-     L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
-  --marigold-100: #FCF6E8;
-  --marigold-200: #F4E9CC;
-  --marigold-300: #E8D6A7;
-  --marigold-400: #CFB368;
-  --marigold-500: #AF8A0D;
-  --marigold-600: #8B6600;
-  --marigold-700: #674900;
-  --marigold-800: #483100;
-  --marigold-900: #291C00;
+  /* Ramp 5 — marigold  (hue 90deg, constant)
+     EXCEPTION to the shared L* curve, on purpose. A yellow held at L*59 is
+     olive, not gold — gold only exists around L*72. The middle of this ramp
+     runs lighter so 500 reads as gold (#D8AB03 ~ metallic gold #D4AF37).
+     Endpoints stay aligned, so 100/200 and 700/800/900 keep the usual
+     contrast guarantees.
+     L*: 97 94 90 82 72 54 37 23 11  <- 400-600 differ from other ramps */
+  --marigold-100: #FCF7E8;
+  --marigold-200: #FBEDC8;
+  --marigold-300: #FAE09D;
+  --marigold-400: #EFC853;
+  --marigold-500: #D8AB03;
+  --marigold-600: #9F7D00;
+  --marigold-700: #6C5500;
+  --marigold-800: #443500;
+  --marigold-900: #261C00;
 
   /* Ramp 6 — smoke-blue  (desaturated on purpose — 'smoke')
      L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
-  --smoke-blue-100: #F0F8FA;
-  --smoke-blue-200: #DDEDF1;
-  --smoke-blue-300: #C3DDE3;
-  --smoke-blue-400: #95BEC7;
-  --smoke-blue-500: #6499A4;
-  --smoke-blue-600: #3E7581;
-  --smoke-blue-700: #29565F;
-  --smoke-blue-800: #1A3B42;
-  --smoke-blue-900: #0D2126;
+  --smoke-blue-100: #EFF8FA;
+  --smoke-blue-200: #DBEBEE;
+  --smoke-blue-300: #C1DBE2;
+  --smoke-blue-400: #94BDC6;
+  --smoke-blue-500: #6296A2;
+  --smoke-blue-600: #3C737E;
+  --smoke-blue-700: #26545D;
+  --smoke-blue-800: #183A40;
+  --smoke-blue-900: #0D2125;
 
   /* Ramp 7 — moss-green  (hue 188deg, constant)
      L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
-  --moss-green-100: #E9FBF9;
-  --moss-green-200: #CDF3EE;
-  --moss-green-300: #A6E6DF;
-  --moss-green-400: #5FCBC1;
-  --moss-green-500: #00A89D;
-  --moss-green-600: #00837A;
-  --moss-green-700: #00615A;
-  --moss-green-800: #00433E;
-  --moss-green-900: #002623;
+  --moss-green-100: #E8FAF8;
+  --moss-green-200: #C9EFEB;
+  --moss-green-300: #A4E3DC;
+  --moss-green-400: #5BC7BD;
+  --moss-green-500: #009F96;
+  --moss-green-600: #007770;
+  --moss-green-700: #005752;
+  --moss-green-800: #003C37;
+  --moss-green-900: #002320;
 
   /* ------------------------------------------------------------------------
-     STATUS COLORS — 3 steps each is the practical minimum:
-       100 = tinted surface · 500 = border / icon · 700 = text on tint
-     Expand to a full 9-step ramp only if you actually need the steps.
+     STATUS COLORS — 4 steps, on the shared L* curve (97 / 86 / 59 / 33):
+       100 = tinted surface   300 = badge / banner fill
+       500 = border + icon (3:1 on white)   700 = text on 100 or 300
+     Hues are yours: success 129deg, error 31deg. Warning is pushed to 62deg
+     (orange) so it cannot be confused with marigold at 90deg.
      ---------------------------------------------------------------------- */
-  --success-100: #EDFBF1;
-  --success-500: #3AA66E;
-  --success-700: #006033;
+  --success-100: #F1F9EB;
+  --success-300: #C8DFB1;
+  --success-500: #729A3E;
+  --success-700: #385700;
 
-  --warning-100: #FEF6E8;
-  --warning-500: #B98414;
-  --warning-700: #6F4400;
+  --warning-100: #FFF5EC;
+  --warning-300: #F8D0AD;
+  --warning-500: #C87C2F;
+  --warning-700: #754100;
 
-  --error-100: #FFF2F0;
-  --error-500: #D36C67;
-  --error-700: #822F2D;
+  --error-100: #FFF4F2;
+  --error-300: #FFCBC2;
+  --error-500: #D67161;
+  --error-700: #853428;
 
   /* Info reuses the brand ramp. Give it its own values only if it must
      read as distinct from brand. */
   --info-100: var(--lavender-100);
+  --info-300: var(--lavender-300);
   --info-500: var(--lavender-500);
   --info-700: var(--lavender-700);
 

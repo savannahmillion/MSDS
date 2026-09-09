@@ -149,7 +149,7 @@ function render() {
   document.getElementById("status").innerHTML = STATUS.map(r =>
     `<div class="ramp" style="grid-template-columns:8rem repeat(9,1fr)">
       <span class="name">--${r}-*</span>` +
-    [100,500,700].map(s => {
+    [100,300,500,700].map(s => {
       const val = v(`--${r}-${s}`);
       const fg = lum(rgb(val)) > .4 ? "#000" : "#fff";
       return `<div class="sw" style="background:${val};color:${fg}">${s}</div>`;

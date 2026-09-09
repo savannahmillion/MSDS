@@ -40,6 +40,23 @@ for those and there does not need to be one.
 7. Custom properties do not work inside `@media` queries. Breakpoints live in
    `tokens/tokens.js` and `tokens/tailwind.preset.js` only.
 
+## The shared lightness curve
+
+Every ramp is generated on one CIE L* curve — `97 92 86 74 59 45 33 22 11` —
+at constant hue, with chroma fitted to the sRGB gamut. That is what makes a
+step number portable: `--rose-700` and `--moss-green-700` are the same
+lightness, so any ramp can feed any semantic token without re-checking
+contrast.
+
+**Marigold is a deliberate exception** (400-600 run at 82/72/54). Gold only
+exists around L*72; held at L*59 a yellow reads olive. Its endpoints stay on
+the curve, so the contrast guarantees at 100/200 and 700/800/900 still hold.
+Do not "fix" this to match the others.
+
+When adding or regenerating a ramp, fit chroma against **linear** RGB before
+the transfer function. Clamping after conversion silently RGB-clips the
+result and pushes it off the curve.
+
 ## Naming ↔ Figma
 
 Figma Variable names map to CSS custom properties by replacing `/` with `-`:
