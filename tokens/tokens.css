@@ -64,17 +64,17 @@
   --rose-800: #51234D;
   --rose-900: #2F132C;
 
-  /* Ramp 4 — vermillion  (hue 9deg, constant)
+  /* Ramp 4 — vermillion  (hue 18deg, constant — crimson)
      L*: 97 92 86 74 59 45 33 22 11 — same curve as every other ramp */
-  --vermillion-100: #FFF3F5;
-  --vermillion-200: #FFE1E4;
-  --vermillion-300: #FFCAD1;
-  --vermillion-400: #F39FAD;
-  --vermillion-500: #D56F82;
-  --vermillion-600: #AE485F;
-  --vermillion-700: #853145;
-  --vermillion-800: #5D1F2E;
-  --vermillion-900: #36111A;
+  --vermillion-100: #FFF4F3;
+  --vermillion-200: #FFE2E1;
+  --vermillion-300: #FFCACB;
+  --vermillion-400: #F39FA2;
+  --vermillion-500: #D66F74;
+  --vermillion-600: #B04951;
+  --vermillion-700: #853239;
+  --vermillion-800: #5E2025;
+  --vermillion-900: #361114;
 
   /* Ramp 5 — marigold  (hue 90deg, constant)
      EXCEPTION to the shared L* curve, on purpose. A yellow held at L*59 is
@@ -121,8 +121,9 @@
      STATUS COLORS — 4 steps, on the shared L* curve (97 / 86 / 59 / 33):
        100 = tinted surface   300 = badge / banner fill
        500 = border + icon (3:1 on white)   700 = text on 100 or 300
-     Hues are yours: success 129deg, error 31deg. Warning is pushed to 62deg
-     (orange) so it cannot be confused with marigold at 90deg.
+     Hues: success 129deg (yours). Warning 62deg and error 42deg are both
+     pushed off the supplied bases to keep the crowded warm band legible —
+     vermillion 18 / error 42 / warning 62 / marigold 90. Info 209deg.
      ---------------------------------------------------------------------- */
   --success-100: #F1F9EB;
   --success-300: #C8DFB1;
@@ -134,17 +135,17 @@
   --warning-500: #C87C2F;
   --warning-700: #754100;
 
-  --error-100: #FFF4F2;
-  --error-300: #FFCBC2;
-  --error-500: #D67161;
-  --error-700: #853428;
+  --error-100: #FFF4F1;
+  --error-300: #FFCDB9;
+  --error-500: #D3744F;
+  --error-700: #833714;
 
-  /* Info reuses the brand ramp. Give it its own values only if it must
-     read as distinct from brand. */
-  --info-100: var(--lavender-100);
-  --info-300: var(--lavender-300);
-  --info-500: var(--lavender-500);
-  --info-700: var(--lavender-700);
+  /* Info — own hue (209deg), from #7FCDDA. Shares smoke-blue's hue band but
+     at full chroma: info reads cyan, smoke-blue reads grey-blue. */
+  --info-100: #E7F9FD;
+  --info-300: #A3E1EC;
+  --info-500: #009CAF;
+  --info-700: #005661;
 
   /* Absolutes — not part of any ramp. */
   --white: #ffffff;

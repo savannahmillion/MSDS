@@ -45,6 +45,26 @@ Values live in `tokens/tokens.css`.
 
 Step meaning: `100` lightest · `500` base · `900` darkest.
 
+### Hue map
+
+| Ramp | Hue | Nearest neighbour |
+|---|---|---|
+| vermillion (crimson) | 18° | error, 24° |
+| **error** | 42° | warning, 20° |
+| **warning** | 62° | marigold, 28° |
+| marigold (gold) | 90° | success, 39° |
+| **success** | 129° | moss-green, 58° |
+| moss-green | 187° | info, 22° |
+| **info** | 209° | smoke-blue, 4.6° — split by chroma, not hue |
+| smoke-blue | 214° | lavender, 52° |
+| lavender (brand) | 266° | rose, 65° |
+| rose | 331° | vermillion, 47° |
+
+Status ramps are bold. The warm band (18–90°) is the crowded one: four ramps
+in 72°. `error` and `warning` are both shifted off their supplied base hues to
+keep it legible. `info` and `smoke-blue` deliberately share a hue and are told
+apart by chroma — info is a saturated cyan, smoke-blue is a grey-blue.
+
 Every ramp shares one L\* curve (97 92 86 74 59 45 33 22 11), so a step number
 means the same lightness in every hue. **Marigold is the one exception** — its
 400-600 run lighter (82/72/54) because a yellow at L\*59 is olive, not gold.
