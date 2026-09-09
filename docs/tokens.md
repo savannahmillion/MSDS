@@ -8,7 +8,7 @@ Values live in `tokens/tokens.css`.
 | Token | Use for |
 |---|---|
 | `--color-text` | Default body and heading text |
-| `--color-text-muted` | Secondary text, captions, labels |
+| `--color-text-muted` | Secondary text, captions, labels (passes AA on white and on `--color-surface-sunken`) |
 | `--color-text-subtle` | Placeholder, timestamps, least-important text |
 | `--color-text-inverse` | Text on a dark/inverse surface |
 | `--color-text-accent` | Emphasized text in brand color |
@@ -21,7 +21,7 @@ Values live in `tokens/tokens.css`.
 | `--color-surface-accent` | Tinted brand background |
 | `--color-surface-inverse` | Dark panels, tooltips |
 | `--color-border` | Default hairlines, dividers, input borders |
-| `--color-border-strong` | Emphasized borders, hovered inputs |
+| `--color-border-strong` | Input borders, hovered controls — meets the 3:1 non-text contrast rule (WCAG 1.4.11). Use this, not `--color-border`, on anything interactive. |
 | `--color-border-accent` | Brand-tinted border |
 | `--color-focus-ring` | Focus outline (set globally, do not reuse) |
 | `--color-action` | Primary button background |

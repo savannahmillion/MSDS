@@ -25,38 +25,42 @@
      in the TIER 2 block below.
      ---------------------------------------------------------------------- */
 
-  /* Ramp 1 — neutral                                                  TODO */
-  --neutral-100: #f5f6f7;
-  --neutral-200: #e4e7e9;
-  --neutral-300: #cbd0d4;
-  --neutral-400: #a3abb2;
-  --neutral-500: #6f7a83;
-  --neutral-600: #55606a;
-  --neutral-700: #3d4750;
-  --neutral-800: #28313a;
-  --neutral-900: #151c23;
+  /* Ramp 1 — neutral (warm brown)
+     Constant-ish hue ~72deg with a gentle warm-to-deep drift.
+     L* is deliberately NON-linear: tight at the light end where surfaces
+     need fine separation, wide through the middle where text tiers live.
+     L*:  97 · 92 · 86 · 74 · 59 · 45 · 33 · 22 · 11 */
+  --neutral-100: #FAF6EF;
+  --neutral-200: #F0E8DE;
+  --neutral-300: #E0D6C8;
+  --neutral-400: #C2B3A1;
+  --neutral-500: #9C8C79;
+  --neutral-600: #7A6855;
+  --neutral-700: #5B4B3A;
+  --neutral-800: #3F3326;
+  --neutral-900: #251C14;
 
-  /* Ramp 2 — brand  (rename)                                          TODO */
-  --brand-100: #eaf2fe;
-  --brand-200: #cfe0fc;
-  --brand-300: #a6c6f9;
-  --brand-400: #6fa2f4;
-  --brand-500: #2f7be8;
-  --brand-600: #1f5fc0;
-  --brand-700: #184a96;
-  --brand-800: #12376f;
-  --brand-900: #0c2549;
+  /* Ramp 2 — lavender                                          TODO */
+  --brand-100: #E1E7F6;
+  --brand-200: #C3CFED;
+  --brand-300: #A4B7E4;
+  --brand-400: #869FDB;
+  --brand-500: #6887D2;
+  --brand-600: #5D76B7;
+  --brand-700: #51669C;
+  --brand-800: #465581;
+  --brand-900: #3A4566;
 
-  /* Ramp 3 — accent  (rename)                                         TODO */
-  --accent-100: #e6f6f4;
-  --accent-200: #c4eae5;
-  --accent-300: #93d8d0;
-  --accent-400: #57beb3;
-  --accent-500: #2a9d8f;
-  --accent-600: #1f7d72;
-  --accent-700: #196159;
-  --accent-800: #134943;
-  --accent-900: #0c302c;
+  /* Ramp 3 — rose                                         TODO */
+  --accent-100: #F5E6F4;
+  --accent-200: #ECCEE8;
+  --accent-300: #E2B5DD;
+  --accent-400: #D99DD1;
+  --accent-500: #CF84C6;
+  --accent-600: #B874AD;
+  --accent-700: #A26493;
+  --accent-800: #8B537A;
+  --accent-900: #754360;
 
   /* Ramp 4 — hue-4  (rename)                                          TODO */
   --hue4-100: #fef5e7;
@@ -222,8 +226,8 @@
 :root {
   /* Text */
   --color-text:          var(--neutral-900);
-  --color-text-muted:    var(--neutral-600);
-  --color-text-subtle:   var(--neutral-500);
+  --color-text-muted:    var(--neutral-700);
+  --color-text-subtle:   var(--neutral-600);
   --color-text-inverse:  var(--white);
   --color-text-accent:   var(--brand-700);
   --color-text-link:     var(--brand-600);
@@ -239,7 +243,7 @@
 
   /* Borders */
   --color-border:        var(--neutral-200);
-  --color-border-strong: var(--neutral-300);
+  --color-border-strong: var(--neutral-500);
   --color-border-accent: var(--brand-300);
   --color-focus-ring:    var(--brand-500);
 
