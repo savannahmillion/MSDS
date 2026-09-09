@@ -1,0 +1,333 @@
+/* ==========================================================================
+   MSDS — Million Somethings Design System
+   tokens.css  ·  SOURCE OF TRUTH for every design value.
+
+   TIER 1 — PRIMITIVES : raw values. Components must NEVER reference these.
+   TIER 2 — SEMANTIC   : the only tokens components are allowed to use.
+
+   Figma Variables map 1:1 by replacing "/" with "-":
+     color/text/muted  ->  --color-text-muted
+
+   All placeholder values are marked TODO. Find them with:
+     grep -rn "TODO" tokens/tokens.css
+   ========================================================================== */
+
+
+/* ==========================================================================
+   TIER 1 — PRIMITIVES
+   ========================================================================== */
+:root {
+
+  /* ------------------------------------------------------------------------
+     COLOR RAMPS — 7 ramps x 9 steps.
+     100 = lightest · 500 = your base color · 900 = darkest.
+     RENAME each ramp prefix to your real hue name, then find/replace it
+     in the TIER 2 block below.
+     ---------------------------------------------------------------------- */
+
+  /* Ramp 1 — neutral                                                  TODO */
+  --neutral-100: #f5f6f7;
+  --neutral-200: #e4e7e9;
+  --neutral-300: #cbd0d4;
+  --neutral-400: #a3abb2;
+  --neutral-500: #6f7a83;
+  --neutral-600: #55606a;
+  --neutral-700: #3d4750;
+  --neutral-800: #28313a;
+  --neutral-900: #151c23;
+
+  /* Ramp 2 — brand  (rename)                                          TODO */
+  --brand-100: #eaf2fe;
+  --brand-200: #cfe0fc;
+  --brand-300: #a6c6f9;
+  --brand-400: #6fa2f4;
+  --brand-500: #2f7be8;
+  --brand-600: #1f5fc0;
+  --brand-700: #184a96;
+  --brand-800: #12376f;
+  --brand-900: #0c2549;
+
+  /* Ramp 3 — accent  (rename)                                         TODO */
+  --accent-100: #e6f6f4;
+  --accent-200: #c4eae5;
+  --accent-300: #93d8d0;
+  --accent-400: #57beb3;
+  --accent-500: #2a9d8f;
+  --accent-600: #1f7d72;
+  --accent-700: #196159;
+  --accent-800: #134943;
+  --accent-900: #0c302c;
+
+  /* Ramp 4 — hue-4  (rename)                                          TODO */
+  --hue4-100: #fef5e7;
+  --hue4-200: #fce7c2;
+  --hue4-300: #f8d28e;
+  --hue4-400: #f2b54f;
+  --hue4-500: #e29517;
+  --hue4-600: #b87512;
+  --hue4-700: #915c0e;
+  --hue4-800: #6b440a;
+  --hue4-900: #452c07;
+
+  /* Ramp 5 — hue-5  (rename)                                          TODO */
+  --hue5-100: #fdeef0;
+  --hue5-200: #fad3d9;
+  --hue5-300: #f5aab6;
+  --hue5-400: #ed788c;
+  --hue5-500: #de4560;
+  --hue5-600: #b8314a;
+  --hue5-700: #92253a;
+  --hue5-800: #6c1a2b;
+  --hue5-900: #46111c;
+
+  /* Ramp 6 — hue-6  (rename)                                          TODO */
+  --hue6-100: #f2eefd;
+  --hue6-200: #dfd5fa;
+  --hue6-300: #c4b2f5;
+  --hue6-400: #a085ed;
+  --hue6-500: #7c5ae0;
+  --hue6-600: #6144b8;
+  --hue6-700: #4c3492;
+  --hue6-800: #38266c;
+  --hue6-900: #241946;
+
+  /* Ramp 7 — hue-7  (rename)                                          TODO */
+  --hue7-100: #f1f8e7;
+  --hue7-200: #deeec3;
+  --hue7-300: #c2df92;
+  --hue7-400: #a0cb5b;
+  --hue7-500: #7fb02c;
+  --hue7-600: #658c23;
+  --hue7-700: #4f6d1b;
+  --hue7-800: #3a5114;
+  --hue7-900: #26350d;
+
+  /* ------------------------------------------------------------------------
+     STATUS COLORS — 3 steps each is the practical minimum:
+       100 = tinted surface · 500 = border / icon · 700 = text on tint
+     Expand to a full 9-step ramp only if you actually need the steps.
+     ---------------------------------------------------------------------- */
+  --success-100: #e9f7ef;                                           /* TODO */
+  --success-500: #21a366;                                           /* TODO */
+  --success-700: #14603c;                                           /* TODO */
+
+  --warning-100: #fef6e6;                                           /* TODO */
+  --warning-500: #e0a116;                                           /* TODO */
+  --warning-700: #8a620d;                                           /* TODO */
+
+  --error-100: #fdedec;                                             /* TODO */
+  --error-500: #d64545;                                             /* TODO */
+  --error-700: #822a2a;                                             /* TODO */
+
+  /* Info reuses the brand ramp. Give it its own values only if it must
+     read as distinct from brand. */
+  --info-100: var(--brand-100);
+  --info-500: var(--brand-500);
+  --info-700: var(--brand-700);
+
+  /* Absolutes — not part of any ramp. */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* ------------------------------------------------------------------------
+     TYPOGRAPHY
+     ---------------------------------------------------------------------- */
+  --font-sans:    "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-ui:      "Inter", var(--font-sans);   /* dashboards: tabular figures */
+  --font-mono:    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --font-size-xs:   0.75rem;    /* 12 */
+  --font-size-sm:   0.875rem;   /* 14 */
+  --font-size-base: 1rem;       /* 16 */
+  --font-size-lg:   1.125rem;   /* 18 */
+  --font-size-xl:   1.25rem;    /* 20 */
+  --font-size-2xl:  1.5rem;     /* 24 */
+  --font-size-3xl:  1.875rem;   /* 30 */
+  --font-size-4xl:  2.25rem;    /* 36 */
+  --font-size-5xl:  3rem;       /* 48 */
+
+  /* Replace with your decided base line spacing.                      TODO */
+  --leading-none:    1;
+  --leading-tight:   1.2;
+  --leading-snug:    1.35;
+  --leading-normal:  1.5;      /* <- your base */
+  --leading-relaxed: 1.65;
+
+  --tracking-tight:  -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide:   0.02em;
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ------------------------------------------------------------------------
+     SPACING — 4px base, tied to the line-height rhythm above.
+     ---------------------------------------------------------------------- */
+  --space-0:  0;
+  --space-px: 1px;
+  --space-1:  0.25rem;   /*  4 */
+  --space-2:  0.5rem;    /*  8 */
+  --space-3:  0.75rem;   /* 12 */
+  --space-4:  1rem;      /* 16 */
+  --space-5:  1.25rem;   /* 20 */
+  --space-6:  1.5rem;    /* 24 */
+  --space-8:  2rem;      /* 32 */
+  --space-10: 2.5rem;    /* 40 */
+  --space-12: 3rem;      /* 48 */
+  --space-16: 4rem;      /* 64 */
+  --space-20: 5rem;      /* 80 */
+  --space-24: 6rem;      /* 96 */
+
+  /* ------------------------------------------------------------------------
+     RADIUS · SHADOW · MOTION · LAYERS
+     ---------------------------------------------------------------------- */
+  --radius-none: 0;
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px 0 rgb(21 28 35 / 0.06);
+  --shadow-md: 0 4px 12px -2px rgb(21 28 35 / 0.10);
+  --shadow-lg: 0 12px 28px -6px rgb(21 28 35 / 0.14);
+  --shadow-xl: 0 24px 48px -12px rgb(21 28 35 / 0.18);
+
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out:      cubic-bezier(0, 0, 0.2, 1);
+  --ease-in:       cubic-bezier(0.4, 0, 1, 1);
+
+  --layer-base:     0;
+  --layer-dropdown: 100;
+  --layer-sticky:   200;
+  --layer-overlay:  300;
+  --layer-modal:    400;
+  --layer-toast:    500;
+
+  /* Breakpoints live in tokens.js / tailwind.preset.js — CSS custom
+     properties do NOT work inside @media queries. Keep these in sync:
+       sm 40rem · md 48rem · lg 64rem · xl 80rem */
+}
+
+
+/* ==========================================================================
+   TIER 2 — SEMANTIC  (light theme)
+   These are the ONLY color tokens a component may reference.
+   ========================================================================== */
+:root {
+  /* Text */
+  --color-text:          var(--neutral-900);
+  --color-text-muted:    var(--neutral-600);
+  --color-text-subtle:   var(--neutral-500);
+  --color-text-inverse:  var(--white);
+  --color-text-accent:   var(--brand-700);
+  --color-text-link:     var(--brand-600);
+  --color-text-disabled: var(--neutral-400);
+
+  /* Surfaces */
+  --color-surface:          var(--white);
+  --color-surface-raised:   var(--white);
+  --color-surface-sunken:   var(--neutral-100);
+  --color-surface-hover:    var(--neutral-100);
+  --color-surface-accent:   var(--brand-100);
+  --color-surface-inverse:  var(--neutral-900);
+
+  /* Borders */
+  --color-border:        var(--neutral-200);
+  --color-border-strong: var(--neutral-300);
+  --color-border-accent: var(--brand-300);
+  --color-focus-ring:    var(--brand-500);
+
+  /* Primary action */
+  --color-action:         var(--brand-500);
+  --color-action-hover:   var(--brand-600);
+  --color-action-active:  var(--brand-700);
+  --color-action-text:    var(--white);
+
+  /* Secondary action */
+  --color-action-secondary:       var(--neutral-100);
+  --color-action-secondary-hover: var(--neutral-200);
+  --color-action-secondary-text:  var(--neutral-900);
+
+  /* Status */
+  --color-success:         var(--success-500);
+  --color-success-surface: var(--success-100);
+  --color-success-text:    var(--success-700);
+
+  --color-warning:         var(--warning-500);
+  --color-warning-surface: var(--warning-100);
+  --color-warning-text:    var(--warning-700);
+
+  --color-danger:          var(--error-500);
+  --color-danger-surface:  var(--error-100);
+  --color-danger-text:     var(--error-700);
+
+  --color-info:            var(--info-500);
+  --color-info-surface:    var(--info-100);
+  --color-info-text:       var(--info-700);
+}
+
+
+/* ==========================================================================
+   TIER 2 — SEMANTIC  (dark theme)
+   Only the semantic layer flips. Never redefine a primitive here.
+   ========================================================================== */
+[data-theme="dark"] {
+  --color-text:          var(--neutral-100);
+  --color-text-muted:    var(--neutral-400);
+  --color-text-subtle:   var(--neutral-500);
+  --color-text-inverse:  var(--neutral-900);
+  --color-text-accent:   var(--brand-300);
+  --color-text-link:     var(--brand-300);
+  --color-text-disabled: var(--neutral-600);
+
+  --color-surface:         var(--neutral-900);
+  --color-surface-raised:  var(--neutral-800);
+  --color-surface-sunken:  var(--black);
+  --color-surface-hover:   var(--neutral-800);
+  --color-surface-accent:  var(--brand-900);
+  --color-surface-inverse: var(--neutral-100);
+
+  --color-border:        var(--neutral-700);
+  --color-border-strong: var(--neutral-600);
+  --color-border-accent: var(--brand-700);
+  --color-focus-ring:    var(--brand-400);
+
+  --color-action:        var(--brand-500);
+  --color-action-hover:  var(--brand-400);
+  --color-action-active: var(--brand-300);
+  --color-action-text:   var(--white);
+
+  --color-action-secondary:       var(--neutral-800);
+  --color-action-secondary-hover: var(--neutral-700);
+  --color-action-secondary-text:  var(--neutral-100);
+
+  --color-success-surface: var(--success-700);
+  --color-success-text:    var(--success-100);
+  --color-warning-surface: var(--warning-700);
+  --color-warning-text:    var(--warning-100);
+  --color-danger-surface:  var(--error-700);
+  --color-danger-text:     var(--error-100);
+  --color-info-surface:    var(--info-700);
+  --color-info-text:       var(--info-100);
+}
+
+/* Theme resolution
+   There is deliberately no @media (prefers-color-scheme) block that redefines
+   the dark tokens — it would duplicate the whole block above and the two
+   copies would drift. Instead, set data-theme on <html> once at boot:
+
+     <script>
+       const t = localStorage.getItem("theme")
+         ?? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+       document.documentElement.dataset.theme = t;
+     </script>
+
+   One source of truth for dark values, and the user can override the OS. */
+:root { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }

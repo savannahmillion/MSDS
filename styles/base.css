@@ -1,0 +1,66 @@
+/* MSDS base — element defaults built from semantic tokens only.
+   Import order: tokens.css -> reset.css -> base.css -> your app styles. */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-base); }
+
+p { text-wrap: pretty; }
+
+small { font-size: var(--font-size-sm); color: var(--color-text-muted); }
+
+a {
+  color: var(--color-text-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+code, pre, kbd, samp { font-family: var(--font-mono); font-size: 0.9em; }
+
+hr { border: 0; border-top: 1px solid var(--color-border); }
+
+/* One focus style, everywhere. Do not remove outlines per-component. */
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+::selection {
+  background-color: var(--color-surface-accent);
+  color: var(--color-text-accent);
+}
+
+/* Tabular figures for anything numeric — tables, dashboards, FinTrack. */
+.numeric, td.numeric, [data-numeric] {
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
