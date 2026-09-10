@@ -47,6 +47,7 @@ export default {
         border: {
           DEFAULT: "var(--color-border)",
           strong: "var(--color-border-strong)",
+          accent: "var(--color-border-accent)",
         },
         action: {
           DEFAULT: "var(--color-action)",
