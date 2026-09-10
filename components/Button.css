@@ -1,0 +1,85 @@
+/* Button — plain CSS, tier-2 tokens only. No Tailwind.
+   Naming: `.msds-button` base, `--modifier` for a variant/size/color.
+   Shape and color are independent axes, combined by the JS (see Button.jsx),
+   the same way the old Tailwind version composed utility classes. */
+
+.msds-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-medium);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+.msds-button--sm {
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+}
+
+.msds-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Shape: solid (default) */
+.msds-button--solid {
+  background-color: var(--color-action);
+  color: var(--color-action-text);
+}
+.msds-button--solid:hover {
+  background-color: var(--color-action-hover);
+}
+.msds-button--solid:active {
+  background-color: var(--color-action-active);
+}
+.msds-button--solid.msds-button--secondary {
+  background-color: var(--color-action-secondary);
+  color: var(--color-action-secondary-text);
+}
+.msds-button--solid.msds-button--secondary:hover {
+  background-color: var(--color-action-secondary-hover);
+}
+.msds-button--solid.msds-button--secondary:active {
+  background-color: var(--color-action-secondary-hover);
+}
+
+/* Shape: outline — border only, fills on hover */
+.msds-button--outline {
+  background-color: transparent;
+  border-color: var(--color-border-strong);
+  color: var(--color-text-muted);
+}
+.msds-button--outline:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+/* Shape: plain — text only, color set by the `color` prop */
+.msds-button--plain {
+  background-color: transparent;
+  color: var(--color-text-muted);
+}
+.msds-button--plain:hover {
+  color: var(--color-text);
+}
+.msds-button--plain.msds-button--accent {
+  color: var(--color-action);
+}
+.msds-button--plain.msds-button--accent:hover {
+  color: var(--color-action-hover);
+}
+.msds-button--plain.msds-button--danger {
+  color: var(--color-text-subtle);
+}
+.msds-button--plain.msds-button--danger:hover {
+  color: var(--color-danger);
+}

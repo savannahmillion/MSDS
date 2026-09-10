@@ -1,0 +1,21 @@
+/* Checkbox — plain CSS, tier-2 tokens only. No Tailwind. */
+
+.msds-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+.msds-checkbox--sm {
+  font-size: var(--font-size-xs);
+}
+
+.msds-checkbox__input {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  accent-color: var(--color-action);
+}

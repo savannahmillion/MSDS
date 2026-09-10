@@ -1,6 +1,6 @@
 {
   "name": "@msds/ui",
-  "version": "0.1.0",
+  "version": "0.7.0",
   "description": "Million Somethings Design System — tokens and primitives shared across personal projects.",
   "type": "module",
   "private": false,

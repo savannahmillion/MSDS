@@ -41,6 +41,7 @@ export default {
           DEFAULT: "var(--color-surface)",
           raised: "var(--color-surface-raised)",
           sunken: "var(--color-surface-sunken)",
+          hover: "var(--color-surface-hover)",
           accent: "var(--color-surface-accent)",
         },
         border: {
@@ -50,7 +51,13 @@ export default {
         action: {
           DEFAULT: "var(--color-action)",
           hover: "var(--color-action-hover)",
+          active: "var(--color-action-active)",
           text: "var(--color-action-text)",
+        },
+        "action-secondary": {
+          DEFAULT: "var(--color-action-secondary)",
+          hover: "var(--color-action-secondary-hover)",
+          text: "var(--color-action-secondary-text)",
         },
         success: "var(--color-success)",
         info: "var(--color-info)",

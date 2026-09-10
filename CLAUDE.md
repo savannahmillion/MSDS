@@ -89,10 +89,14 @@ docs/
 
 ## Components
 
-Empty on purpose. **Do not create a component until two real projects need
-the same one.** Extract from working code, never design in the abstract.
-When one is added, it is copied into consuming projects, not imported — they
-are expected to diverge.
+**Do not create a component until two real projects need the same one.**
+Extract from working code, never design in the abstract. When one is added,
+it is copied into consuming projects, not imported — they are expected to
+diverge. Three exist so far (`Button`, `Checkbox`, `Select`), each extracted
+from Provendoire and FinTrack; see `components/README.md` for what each was
+pulled from and where it deliberately corrects the source apps against
+these tokens. Everything else in `components/` is still unwritten — the
+absence of a component is the default, not an oversight.
 
 ## Versioning
 
