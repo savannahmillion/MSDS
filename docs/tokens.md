@@ -20,6 +20,7 @@ Values live in `tokens/tokens.css`.
 | `--color-surface-hover` | Row/list hover background |
 | `--color-surface-accent` | Tinted brand background |
 | `--color-surface-inverse` | Dark panels, tooltips |
+| `--color-surface-inverse-raised` | Raised surface on top of an inverse panel (e.g. the active item in a dark sidebar) |
 | `--color-border` | Default hairlines, dividers, input borders |
 | `--color-border-strong` | Input borders, hovered controls — meets the 3:1 non-text contrast rule (WCAG 1.4.11). Use this, not `--color-border`, on anything interactive. |
 | `--color-border-accent` | Brand-tinted border |

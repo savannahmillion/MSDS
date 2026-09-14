@@ -60,10 +60,26 @@ export default {
           hover: "var(--color-action-secondary-hover)",
           text: "var(--color-action-secondary-text)",
         },
-        success: "var(--color-success)",
-        info: "var(--color-info)",
-        warning: "var(--color-warning)",
-        danger: "var(--color-danger)",
+        success: {
+          DEFAULT: "var(--color-success)",
+          surface: "var(--color-success-surface)",
+          text: "var(--color-success-text)",
+        },
+        info: {
+          DEFAULT: "var(--color-info)",
+          surface: "var(--color-info-surface)",
+          text: "var(--color-info-text)",
+        },
+        warning: {
+          DEFAULT: "var(--color-warning)",
+          surface: "var(--color-warning-surface)",
+          text: "var(--color-warning-text)",
+        },
+        danger: {
+          DEFAULT: "var(--color-danger)",
+          surface: "var(--color-danger-surface)",
+          text: "var(--color-danger-text)",
+        },
       },
       fontFamily: {
         sans: "var(--font-sans)",
