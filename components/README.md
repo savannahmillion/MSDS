@@ -10,9 +10,11 @@ its component API carries over here, not its styling mechanism.
 
 Do not add a component until **two real projects need the same one**.
 Extract it from working code; do not design it in the abstract — you will
-guess the props wrong. Every component below was pulled from Provendoire
-and FinTrack's actual markup, not invented ahead of need. Radio was
-skipped for that reason — no real project has one yet.
+guess the props wrong. Every component below was pulled from a real app's
+actual markup, not invented ahead of need — Button, Checkbox and Select
+from Provendoire and FinTrack, ThemeToggle from Seek (the only one of the
+three that had wired up dark mode before the others adopted it too). Radio
+was skipped for that reason — no real project has one yet.
 
 - It may reference **tier 2 semantic tokens only** (see `../CLAUDE.md`),
   as CSS custom properties (`var(--color-action)`), never Tailwind classes.
@@ -35,6 +37,7 @@ skipped for that reason — no real project has one yet.
 | `Button.jsx` / `.css` | Provendoire `RecipeEdit`/`RecipeMetaPanel`, FinTrack save/cancel/ghost buttons everywhere | `solid` (default) / `outline` / `plain`, `color="action"` \| `"secondary"` \| `"danger"`. Both source apps used `bg-ink`/`bg-text` (a text token, misused as a background) — this uses `--color-action` / `--color-action-secondary` instead, the tokens named for the job. |
 | `Checkbox.jsx` / `.css` | Provendoire "On rotation", FinTrack "Shared cost" / "Always use for this merchant" | Native `<input type="checkbox">` wrapped in a `<label>`, unchanged from both apps. Adds `accent-color: var(--color-action)` for the checked state — neither app set one. |
 | `Select.jsx` / `.css` | FinTrack's `inp`-styled `<select>` (Business, NetWorth, Taxes, Transactions, Review, Topbar, SplitEditor) | Styled **native** `<select>`, not a Listbox — neither app has custom option markup or multi-select, so Headless UI isn't earning its dependency yet. `appearance: none` + a drawn chevron. |
+| `ThemeToggle.jsx` / `.css` | Seek's `src/components/ThemeToggle.jsx` | Reads/writes `document.documentElement.dataset.theme` and persists to `localStorage`. The other half of dark mode from the boot script in `docs/consuming-project.md` step 3 — that script sets the value before first paint, this is what changes it afterward. No props; a project wanting different states than "Dark"/"Light" text should treat this as a starting point to copy and edit, same as any other component here. |
 
 All three padding scales were normalized from the apps' actual Tailwind
 values (`px-2.5`, `py-1.5`, etc.) onto real `--space-*` steps, and borders

@@ -1,0 +1,17 @@
+/* ThemeToggle — plain CSS, tier-2 tokens only. No Tailwind. */
+
+.msds-theme-toggle {
+  font: inherit;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+}
+
+.msds-theme-toggle:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
