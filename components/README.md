@@ -13,8 +13,14 @@ Extract it from working code; do not design it in the abstract — you will
 guess the props wrong. Every component below was pulled from a real app's
 actual markup, not invented ahead of need — Button, Checkbox and Select
 from Provendoire and FinTrack, ThemeToggle from Seek (the only one of the
-three that had wired up dark mode before the others adopted it too). Radio
-was skipped for that reason — no real project has one yet.
+three that had wired up dark mode before the others adopted it too),
+Segmented/Chip/Empty from whichever two of the three actually had a
+matching real implementation (see the table — it's not always the same
+two). Radio was skipped for that reason — no real project has one yet.
+So was Card: FinTrack has a real one (title/action header over a bordered
+surface, used everywhere), but Provendoire only has one-off `p-4 bg-canvas
+rounded-xl border` divs, not the same reusable shape — one project, not
+two. Revisit if Seek or Provendoire grow an equivalent.
 
 - It may reference **tier 2 semantic tokens only** (see `../CLAUDE.md`),
   as CSS custom properties (`var(--color-action)`), never Tailwind classes.
@@ -38,6 +44,9 @@ was skipped for that reason — no real project has one yet.
 | `Checkbox.jsx` / `.css` | Provendoire "On rotation", FinTrack "Shared cost" / "Always use for this merchant" | Native `<input type="checkbox">` wrapped in a `<label>`, unchanged from both apps. Adds `accent-color: var(--color-action)` for the checked state — neither app set one. |
 | `Select.jsx` / `.css` | FinTrack's `inp`-styled `<select>` (Business, NetWorth, Taxes, Transactions, Review, Topbar, SplitEditor) | Styled **native** `<select>`, not a Listbox — neither app has custom option markup or multi-select, so Headless UI isn't earning its dependency yet. `appearance: none` + a drawn chevron. |
 | `ThemeToggle.jsx` / `.css` | Seek's `src/components/ThemeToggle.jsx` | Reads/writes `document.documentElement.dataset.theme` and persists to `localStorage`. The other half of dark mode from the boot script in `docs/consuming-project.md` step 3 — that script sets the value before first paint, this is what changes it afterward. No props; a project wanting different states than "Dark"/"Light" text should treat this as a starting point to copy and edit, same as any other component here. |
+| `Segmented.jsx` / `.css` | FinTrack's `Segmented` (Topbar's My Share/Full Amount, Personal/All/Business), Seek's `.segmented` (Cards' arcana filter, hand-rolled markup) | Two real looks, kept as both: `bordered` (default, Seek — divided box, active option tinted) and `pill` (FinTrack — tinted track, active option raised with a shadow). `role="group"` + `aria-pressed` came from Seek's version; FinTrack's had neither. |
+| `Chip.jsx` / `.css` | Provendoire's `TagPill.jsx` (recipe tags), Seek's `.chip`/`.chips` (card keywords, the "Reversed" flag) | Provendoire's has a border, Seek's doesn't — the `bordered` prop, not a pick-one. `as` covers Seek's two shapes (`<span>` standalone, `<li>` in a `<ul>`); the flex-wrap list layout itself stays the caller's problem, as it already was in both apps. |
+| `Empty.jsx` / `.css` | Seek's `.empty` (inline, e.g. "No spreads yet."), FinTrack's `Empty` in ui.jsx (the same idea, centered with padding as a table/panel placeholder) | `padded` switches between the two real shapes. |
 
 All three padding scales were normalized from the apps' actual Tailwind
 values (`px-2.5`, `py-1.5`, etc.) onto real `--space-*` steps, and borders
@@ -62,8 +71,9 @@ as long as they're still on Tailwind.
   rich option content, multi-select, or a combobox, that's when a
   hand-rolled or Headless-UI-backed listbox earns its place here, not
   before.
-- **Card, Input** — the other two components the original scaffolding note
-  flagged as likely-needed; not touched in this pass.
+- **Card** — FinTrack has one, no second project does yet (see above).
+- **Input** — the other component the original scaffolding note flagged as
+  likely-needed; not touched in this pass.
 - **Migrating Provendoire/FinTrack's existing Tailwind markup** off
   Tailwind entirely is a separate, larger effort from adding new
   plain-CSS components here — this pass only covers new components, not

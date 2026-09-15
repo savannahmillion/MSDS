@@ -1,0 +1,16 @@
+/* Chip — plain CSS, tier-2 tokens only. No Tailwind. */
+
+.msds-chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-size-xs);
+  line-height: var(--leading-none);
+  color: var(--color-text-muted);
+  background: var(--color-surface-sunken);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-2);
+}
+
+.msds-chip--bordered {
+  border: 1px solid var(--color-border);
+}

@@ -1,0 +1,12 @@
+/* Empty — plain CSS, tier-2 tokens only. No Tailwind. */
+
+.msds-empty {
+  margin: 0;
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-sm);
+}
+
+.msds-empty--padded {
+  text-align: center;
+  padding-block: var(--space-10);
+}

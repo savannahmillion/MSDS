@@ -1,0 +1,65 @@
+/* Segmented — plain CSS, tier-2 tokens only. No Tailwind. */
+
+.msds-segmented {
+  display: inline-flex;
+  font-size: var(--font-size-sm);
+}
+
+.msds-segmented button {
+  font: inherit;
+  font-size: inherit;
+  padding: var(--space-2) var(--space-4);
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.msds-segmented--sm button {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-xs);
+}
+
+/* variant: bordered (Seek) — a divided box */
+.msds-segmented--bordered {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.msds-segmented--bordered button {
+  border-inline-end: 1px solid var(--color-border);
+}
+.msds-segmented--bordered button:last-child {
+  border-inline-end: 0;
+}
+.msds-segmented--bordered button:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+.msds-segmented--bordered button[aria-pressed="true"] {
+  background: var(--color-surface-accent);
+  color: var(--color-text-accent);
+  font-weight: var(--weight-medium);
+}
+
+/* variant: pill (FinTrack) — a tinted track, active option raised */
+.msds-segmented--pill {
+  background: var(--color-surface-sunken);
+  border-radius: var(--radius-lg);
+  padding: var(--space-1);
+  gap: var(--space-1);
+}
+.msds-segmented--pill button {
+  border-radius: var(--radius-md);
+}
+.msds-segmented--pill button:hover {
+  color: var(--color-text);
+}
+.msds-segmented--pill button[aria-pressed="true"] {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  font-weight: var(--weight-medium);
+}
