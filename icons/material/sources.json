@@ -1,0 +1,23 @@
+{
+  "arrow-left": {
+    "material": "arrow_back",
+    "style": "outlined",
+    "fill": false,
+    "weight": 400,
+    "grade": 0
+  },
+  "arrow-right": {
+    "material": "arrow_forward",
+    "style": "outlined",
+    "fill": false,
+    "weight": 400,
+    "grade": 0
+  },
+  "search": {
+    "material": "search",
+    "style": "outlined",
+    "fill": false,
+    "weight": 400,
+    "grade": 0
+  }
+}

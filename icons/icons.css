@@ -1,0 +1,17 @@
+/* Icons — plain CSS.
+ *
+ * An icon is 1em square and paints with currentColor (set on the <svg>
+ * itself), so it takes its size from font-size and its color from
+ * color. Set both with tokens, on the icon or on whatever contains it:
+ *
+ *   .toolbar .msds-icon { font-size: var(--font-size-2xl); }   24px
+ *   .danger             { color: var(--color-danger-text); }
+ *
+ * No per-icon dark styles: currentColor already follows the theme. */
+
+.msds-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: middle;
+}

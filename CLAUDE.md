@@ -81,7 +81,13 @@ styles/
   reset.css           token-free reset
   base.css            element defaults from semantic tokens
   index.css           entry point: tokens + reset + base
+icons/
+  material/*.svg      from Material Symbols, rescaled to 24×24 (Apache 2.0)
+  custom/*.svg        hand-drawn
+  index.js            GENERATED — icon markup + iconSvg()
+  icons.css           .msds-icon: 1em, currentColor
 components/           React primitives, copy-paste (shadcn pattern)
+scripts/              icons-build.js, icons-add-material.js
 docs/
   tokens.md           flat token reference — read this to pick token names
   consuming-project.md  what to paste into a project that uses MSDS
@@ -97,6 +103,23 @@ from Provendoire and FinTrack; see `components/README.md` for what each was
 pulled from and where it deliberately corrects the source apps against
 these tokens. Everything else in `components/` is still unwritten — the
 absence of a component is the default, not an oversight.
+
+## Icons
+
+One set on one grid: single-color SVG, `viewBox="0 0 24 24"`,
+`fill="currentColor"`, kebab-case names shared across `material/` and
+`custom/`. Size is `font-size`, color is `color` — both set with tokens by
+the caller, never inside the SVG.
+
+- Add icons only when an app uses one, same as components.
+- Material: `npm run icons:add -- <material_name> [msds-name]`. Never paste
+  a Material SVG in by hand — they ship on a 960 viewBox.
+- Custom: drop the export into `icons/custom/`, run `npm run icons`. If
+  the build refuses it, fix the drawing; do not loosen the validator.
+- Never edit `icons/index.js` or `icons/preview.html`; they are generated.
+- No `<Icon>` React component until two apps render icons.
+
+See `icons/README.md`.
 
 ## Versioning
 

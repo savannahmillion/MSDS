@@ -39,7 +39,16 @@ MSDS declares font *stacks*, not font *files*. Load Work Sans / Inter /
 IBM Plex Mono in each project — one variable font file per family, not six
 static weights.
 
-## 5. Paste this into the project's CLAUDE.md
+## 5. Icons (optional)
+
+```js
+import "@msds/ui/icons.css";
+import { iconSvg, icons } from "@msds/ui/icons";
+```
+
+See `icons/README.md` for usage in HTML and React.
+
+## 6. Paste this into the project's CLAUDE.md
 
 ```md
 ## Design system — MSDS
@@ -56,6 +65,8 @@ Rules:
 - Focus styles are global. Never `outline: none`.
 - Breakpoints are not CSS vars — import from `@msds/ui/tokens`.
 - If the token you need does not exist, say so instead of hardcoding a value.
+- Icons come from `@msds/ui/icons` (list: `iconNames`). If the icon you need
+  isn't there, say so — it gets added to MSDS, not inlined in the project.
 ```
 
 Once this block is in three projects, turn it into a Claude Code skill so it

@@ -4,6 +4,7 @@ Tokens and primitives shared across personal projects.
 
 - **Architecture and rules:** [`CLAUDE.md`](./CLAUDE.md)
 - **Token reference:** [`docs/tokens.md`](./docs/tokens.md)
+- **Icons:** [`icons/README.md`](./icons/README.md)
 - **Adding MSDS to a project:** [`docs/consuming-project.md`](./docs/consuming-project.md)
 
 ## Status: scaffolded, values are placeholders
