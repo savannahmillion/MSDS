@@ -252,6 +252,7 @@
   --color-text-disabled: var(--neutral-400);
 
   /* Surfaces */
+  --color-canvas:           var(--neutral-100);
   --color-surface:          var(--white);
   --color-surface-raised:   var(--white);
   --color-surface-sunken:   var(--neutral-100);
@@ -318,6 +319,7 @@
   --color-text-link:     var(--lavender-300);
   --color-text-disabled: var(--neutral-600);
 
+  --color-canvas:          var(--neutral-900);
   --color-surface:         var(--neutral-900);
   --color-surface-raised:  var(--neutral-800);
   --color-surface-sunken:  var(--black);

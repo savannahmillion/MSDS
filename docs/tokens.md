@@ -14,7 +14,8 @@ Values live in `tokens/tokens.css`.
 | `--color-text-accent` | Emphasized text in brand color |
 | `--color-text-link` | Hyperlinks |
 | `--color-text-disabled` | Disabled control labels |
-| `--color-surface` | Page background |
+| `--color-canvas` | The page itself, when it should sit *under* its content rather than be it — tinted off-white in light mode, the same dark as `--color-surface` in dark mode. Opt in per app: `base.css` still paints `body` with `--color-surface`. |
+| `--color-surface` | Page background, and the surface cards, panels and form fields sit on |
 | `--color-surface-raised` | Cards, popovers, modals |
 | `--color-surface-sunken` | Wells, table stripes, code blocks |
 | `--color-surface-hover` | Row/list hover background |
